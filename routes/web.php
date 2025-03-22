@@ -33,8 +33,3 @@ Route::get('/homepage', function () {
 })->name('homepage');
 
 
-
-Route::get('/test-session', function () {
-    session(['test' => 'Session is working!']);
-    return session('test');
-});

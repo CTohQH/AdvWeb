@@ -37,14 +37,7 @@ class UserController extends Controller
     
             $user = Auth::user();
     
-            // Debugging: Check what is being retrieved
-            Log::info('User Object:', ['user' => $user]);
-    
-            // Ensure we're using `id`, not `user_id`
             session(['user_id' => $user->id]);
-    
-            // Debugging session data before redirection
-            Log::info('Session Data:', session()->all());
     
             return redirect()->route('homepage');
         }

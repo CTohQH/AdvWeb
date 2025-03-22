@@ -10,16 +10,6 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
     <div class="container text-center bg-white shadow-lg p-5 rounded-lg">
         <h1 class="text-3xl font-bold text-gray-800">Welcome to Home Page</h1>
-    @php
-        use Illuminate\Support\Facades\Auth;
-        use Illuminate\Support\Facades\Log;
-
-        Log::info('Auth Check', [
-            'Auth::user()' => Auth::user(),
-            'Auth::check()' => Auth::check(),
-            'session' => session()->all()
-        ]);
-    @endphp
             {{ dd(Auth::user()) }}
     </div>
 </body>
